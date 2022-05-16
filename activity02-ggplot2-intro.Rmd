@@ -208,20 +208,24 @@ Create graphs to explore the relationship between `bill_length_mm` and each of `
 Using these three graphs to discuss which of these three categorical variables seems to be contributing more to these two peaks and explain your reasoning.
 
 ```{r bill_length_by_species}
+ggplot(data = penguins, mapping = aes(x = bill_length_mm, color = species)) +
+  geom_histogram()
 
 ```
 
 
 ```{r bill_length_by_sex}
-
+ggplot(data = penguins, mapping = aes(x = bill_length_mm, color = sex)) +
+  geom_histogram()
 ```
 
 
 ```{r bill_length_by_island}
-
+ggplot(data = penguins, mapping = aes(x = bill_length_mm, color = island)) +
+  geom_histogram()
 ```
 
-**Response**:
+**It looks like species is what defines bill length the most. The Adelie group makes up most of the lower peak, while the other two species make up most of the higher peak. Sex has a pretty even spread across the data. Torgersen the island was mostly in the lower peak as well.**:
 
 
 
