@@ -115,12 +115,14 @@ In the code chunk below, add the missing code (i.e., replacing the `___`) to hav
 
 ```{r boxplot-colors}
 ggplot(data = penguins, mapping = aes(x = flipper_length_mm, y = species, ___ = ___)) +
+ggplot(data = penguins, mapping = aes(x = flipper_length_mm, y = species, color=species)) +
   geom_boxplot()
 ```
 
 Now, comment on what you notice from these boxplots.
 
 **Response**:
+**Gentoo had longer flippers on average. Adelie and Chinstrap were closely related**:
 
 
 Another way to visualize distributions are with points.
@@ -131,6 +133,8 @@ In the code chunk below, complete it so that it produces a jitterplot.
 ```{r jitterplot}
 ggplot(data = penguins, mapping = aes(x = flipper_length_mm, y = species, ___ = ___)) +
   ___()
+ggplot(data = penguins, mapping = aes(x = flipper_length_mm, y = species,color= species)) +
+  geom_jitter()
 ```
 
 Comment on the strengths of the boxplot compared to the jitterplot and vice versa.
@@ -138,6 +142,7 @@ That is, what can you easily determine by looking at the boxplot?
 What about the jitterplot?
 
 **Response**:
+**Jitterplots do a good job visualizing how the data is concentrated, boxplot's strength is showing how the quartiles are related**:
 
 
 Knit, then stage everything listed in your **Git** pane, commit (with a meaningful commit message), and push  to your GitHub repo.
